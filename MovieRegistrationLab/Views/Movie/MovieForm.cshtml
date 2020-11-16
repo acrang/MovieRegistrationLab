@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "RegistrationForm";
+}
+
+@model Movie
+
+<h1>Register a new Movie</h1>
+
+<div class="align-content-lg-center">
+    <form action="DisplayMovie" method="post">
+        <p><input type="number" name="ID" placeholder="Movie ID" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter a number for sorting purposes')" /></p>
+
+        <p><input type="text" name="Title" placeholder="Title" min="2" max="50" required /></p>
+
+        <p>
+            <select id="Genre" name="Genre" required>
+                <option value="" disabled selected hidden>Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="documentary">Documentary</option>
+                <option value="horror">Horror</option>
+                <option value="musical">Musical</option>
+                <option value="romance">Romance</option>
+            </select>
+        </p>
+
+        <p><input type="number" min="1880" max="2020" name="Year" placeholder="Year released" required /></p>
+
+        <p><input type="text" name="Actors" placeholder="Lead actor" /></p>
+        <p><input type="text" name="Actors" placeholder="Supporting actor" /></p>
+        <p><input type="text" name="Actors" placeholder="Supporting actor" /></p>
+
+        <p><input type="text" name="Directors" placeholder="Director 1" /></p>
+        <p><input type="text" name="Directors" placeholder="Director 2" /></p>
+
+        <input type="submit" value="Register Movie" />
+
+    </form>
+</div>
